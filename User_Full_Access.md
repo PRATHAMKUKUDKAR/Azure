@@ -40,4 +40,27 @@
 10. chouse kunal
 11. click select
 <img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/a0a51b9e-295b-469f-9ee9-f70ae08829a7" />
+12. click on Rewive + Create
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/898c6c87-513b-4e94-b8c0-0c380a77f811" />
+
+
+## Stape 3 Verification
+
+1. go to microsoft azure portal
+2. theb type email *Kunal@prathamkukudkargmail.onmicrosoft.com*
+3. then type password *Pote@123*
+4. then set the new password
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/528daf3e-aa5e-4ba3-a0e1-685a3a041248" />
+5. then download the microsoft athentication app
+6. scan the QR
+7. and now you can see the new user
+8. and now you can use any recouses of azure
+<img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/173c195e-4521-402e-8649-7c45161ad04f" />
+
+
+
+
+
+
+
 
