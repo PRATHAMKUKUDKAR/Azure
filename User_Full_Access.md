@@ -29,4 +29,15 @@
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/48929d17-b677-4025-bda4-56ca043303cd" />
 3. click on Azure Subscription 1
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a6739be0-fb43-4741-b1f6-90d889199303" />
+4. click on Access control (IAM)
+5. click on add  -- add role and Assignment
+<img width="1919" height="1069" alt="image" src="https://github.com/user-attachments/assets/da77b7e1-9927-4549-bb5c-8eb843efc341" />
+6. click on privilage Administrator role
+7. chouse owner & contributor
+8. click on next
+<img width="1919" height="1073" alt="image" src="https://github.com/user-attachments/assets/aa4f7f49-572c-42a0-9d3a-c330baa885f5" />
+9. click on select member
+10. chouse kunal
+11. click select
+<img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/a0a51b9e-295b-469f-9ee9-f70ae08829a7" />
 
