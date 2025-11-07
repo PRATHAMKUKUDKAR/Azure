@@ -1,8 +1,5 @@
 # 🧑‍💻 Azure User Creation and Full Permission Setup
 
-This document provides a **step-by-step guide** on how to **create a new user in Microsoft Azure**, **assign Global Administrator privileges**, and **grant full subscription permissions**.
-
----
 
 ## 📘 Step 1: Create a New User
 
