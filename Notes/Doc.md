@@ -33,9 +33,7 @@ An **Azure Virtual Machine (VM)** is an **on-demand, scalable computing resource
 # Azure Virtual Network (VNet) –
 
 ## 1. What is a Virtual Network?  
-Azure Virtual Network (VNet) is the fundamental building block for your private network in Azure. It enables Azure resources (such as VMs) to securely communicate with each other, the internet, and on-premises networks. :contentReference[oaicite:0]{index=0}  
-It delivers scale, availability, and isolation benefits while using familiar networking concepts from traditional datacentres. :contentReference[oaicite:1]{index=1}
-
+Azure Virtual Network (VNet) is the fundamental building block for your private network in Azure. It enables Azure resources (such as VMs) to securely communicate with each other, the internet, and on-premises networks.
 ---
 
 ## 2. Why Use a Virtual Network?  
