@@ -45,6 +45,7 @@ A **VNet** is a private network in Azure used to connect virtual machines and ot
 ---
 
 # Azure VNet Peering
+<img width="844" height="276" alt="image (3)" src="https://github.com/user-attachments/assets/33b633a4-94e2-4d61-a015-46acbdf91412" />
 
 ## What is VNet Peering?
 VNet Peering connects two VNets so that their resources communicate **privately and directly** over Azure’s backbone network.
