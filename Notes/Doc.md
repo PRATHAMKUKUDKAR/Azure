@@ -1,156 +1,67 @@
 # Azure Virtual Machine (VM)
-
 ## Overview
-An **Azure Virtual Machine (VM)** is an **on-demand, scalable computing resource** provided by Microsoft Azure.
+An **Azure Virtual Machine (VM)** is an on-demand computer that runs on Azure’s cloud.  
+It works like a physical computer and allows you to run Windows/Linux OS and applications.
 
 ## Key Points
-- Provides **virtualized hardware** such as **CPU, memory, storage, and networking**.
-- Used to **run operating systems and applications** like a physical computer.
-- Part of **Infrastructure as a Service (IaaS)** in Azure.
-- Supports both **Windows** and **Linux** operating systems.
-- You can **start, stop, scale, or delete** VMs anytime.
-- Commonly used for:
-  - **Hosting websites**
-  - **Development and testing**
-  - **Backup and disaster recovery**
+- Part of **Infrastructure as a Service (IaaS)**
+- Provides CPU, RAM, storage, and networking
+- You can start, stop, scale, or delete anytime
+- Supports **Windows & Linux**
+- Used for:
+  - Hosting websites/applications
+  - Development & testing
+  - Backup and disaster recovery
 
-## Example Use Cases
-- Deploying web servers
-- Running custom applications
-- Creating isolated development environments
+---
 
-# Difference Between Azure Region and Availability Zone
-## Key Differences
+# Azure Region vs Availability Zone
 
 | Feature | Region | Availability Zone |
-|----------|--------|-------------------|
-| **Definition** | Geographical area with multiple data centers | Individual data center within a region |
-| **Purpose** | To group Azure resources geographically | To ensure high availability within a region |
-| **Fault Isolation** | Between different regions | Between zones in the same region |
-| **Example** | Central India, East US | Zone 1, Zone 2, Zone 3 (inside Central India region) |
-
-
-# Azure Virtual Network (VNet) –
-
-## 1. What is a Virtual Network?  
-Azure Virtual Network (VNet) is the fundamental building block for your private network in Azure. It enables Azure resources (such as VMs) to securely communicate with each other, the internet, and on-premises networks.
----
-
-## 2. Why Use a Virtual Network?  
-Key scenarios you can achieve with a VNet: :contentReference[oaicite:2]{index=2}  
-- Communication of Azure resources with the internet.  
-- Communication between Azure resources.  
-- Communication with on-premises resources.  
-- Filtering of network traffic.  
-- Routing of network traffic.  
-- Integration with Azure services.
+|--------|--------|--------------------|
+| Definition | Geographic area with multiple data centers | Individual data centers within a region |
+| Purpose | To deploy Azure resources geographically | High availability inside a region |
+| Fault Isolation | Between regions | Between zones in the same region |
+| Example | Central India, East US | Zone 1, Zone 2, Zone 3 |
 
 ---
 
-## 3. Communication Scenarios  
-### a) With the Internet  
-- All resources in a VNet can by default communicate outbound with the internet. :contentReference[oaicite:3]{index=3}  
-- For inbound access, assign a public IP address or a public load balancer. :contentReference[oaicite:4]{index=4}  
-- If only an internal standard load balancer is used, outbound connectivity isn’t available until you define how outbound will work. :contentReference[oaicite:5]{index=5}
+# Azure Virtual Network (VNet)
 
-### b) Between Azure Resources  
-- You can deploy VMs and other Azure resources (e.g., AKS, VM scale sets) into a VNet. :contentReference[oaicite:6]{index=6}  
-- **Service endpoints**: Extend the VNet’s private address space to Azure service resources, securing the service to only your VNet. :contentReference[oaicite:7]{index=7}  
-- **VNet peering**: Connect two VNets (same or different regions/subscriptions) so resources communicate as if in the same network. :contentReference[oaicite:8]{index=8}
+## What is a VNet?
+A **VNet** is a private network in Azure used to connect virtual machines and other Azure resources securely.
 
-### c) With On-Premises Resources  
-- **Point-to-Site VPN**: Connects a single computer to the VNet. Useful for dev/test or individual devices. Secure tunnel over the internet. :contentReference[oaicite:9]{index=9}  
-- **Site-to-Site VPN**: Between on-premises VPN device and Azure VPN gateway. Encrypted tunnel over the internet. :contentReference[oaicite:10]{index=10}  
-- **Azure ExpressRoute**: Private dedicated connection between your network and Azure. Traffic doesn’t go over the internet. :contentReference[oaicite:11]{index=11}
+## Why use a VNet?
+- Secure communication between Azure resources  
+- Connect Azure to the internet  
+- Connect Azure to on-premises (via VPN or ExpressRoute)  
+- Control traffic using NSG (firewall rules)
 
----
-
-## 4. Traffic Control & Routing  
-### a) Filter Network Traffic  
-- **Network Security Groups (NSG)** & **Application Security Groups (ASG)**: Define inbound/outbound security rules by source/destination IP, port, protocol. :contentReference[oaicite:12]{index=12}  
-- **Network Virtual Appliances (NVA)**: Deploy virtual machines that perform network functions (e.g., firewall, WAN optimization) in the VNet. :contentReference[oaicite:13]{index=13}
-
-### b) Route Network Traffic  
-- Azure provides default routing between subnets, VNets, on-premises, and internet. :contentReference[oaicite:14]{index=14}  
-- You can override default routes via:  
-  - **Custom route tables** per subnet. :contentReference[oaicite:15]{index=15}  
-  - **BGP route propagation** if using VPN gateway or ExpressRoute. :contentReference[oaicite:16]{index=16}
+## Communication Types
+- **VM ↔ Internet:** Needs Public IP for inbound  
+- **VM ↔ VM:** Same VNet or via VNet Peering  
+- **Azure ↔ On-Premises:** Using P2S VPN, S2S VPN, or ExpressRoute
 
 ---
 
-## 5. Integration with Azure Services  
-- You can deploy **dedicated instances** of Azure services into your VNet so they are privately accessible. :contentReference[oaicite:17]{index=17}  
-- **Azure Private Link**: Access specific service instances privately from your VNet (and from on-premises). :contentReference[oaicite:18]{index=18}  
-- **Service Endpoints**: Extend your VNet to Azure services via their public endpoints, and secure those services to your VNet. :contentReference[oaicite:19]{index=19}
+# Azure VNet Peering
 
----
+## What is VNet Peering?
+VNet Peering connects two VNets so that their resources communicate **privately and directly** over Azure’s backbone network.
 
-## 6. Limits, Zones & Pricing  
-- VNets and subnets span all availability zones in a region; you don’t need separate VNets by zone. :contentReference[oaicite:20]{index=20}  
-- There are limits on networking resources (number of VNets, subnets, peers etc). Many limits are max values and you can request increases. :contentReference[oaicite:21]{index=21}  
-- VNet itself is free-of-charge. Charges apply for resources you deploy in/with the VNet (VMs, gateways, etc.). :contentReference[oaicite:22]{index=22}
+## Why use it?
+- Very fast (low latency)
+- Secure (no public internet)
+- No VPN gateway required (cost saving)
+- Works across same region or different regions
 
----
+## Types of Peering
+1. **Regional Peering** – Same region  
+2. **Global Peering** – Different regions  
 
-## 7. Key Terminology Cheat Sheet  
-- **VNet** – Virtual Network in Azure  
-- **Subnet** – Division within a VNet for resource grouping  
-- **NSG** – Network Security Group  
-- **ASG** – Application Security Group  
-- **VNet Peering** – Linking VNets together  
-- **VPN Gateway** – For site-to-site or point-to-site connections  
-- **ExpressRoute** – Private dedicated link to Azure  
-- **Custom Route Table** – For overriding default routing  
-- **Private Link / Service Endpoint** – Private access to Azure services  
-
----
-
-# Azure VNet Peering — Notes 
-<img width="844" height="276" alt="image (3)" src="https://github.com/user-attachments/assets/1df13de6-3251-4d51-b041-2a7e0ef69c39" />
-
-## 2. What is Azure VNet Peering?
-
-Azure VNet Peering connects two virtual networks so that the resources inside them (VMs, databases, applications) can communicate privately as if they are part of the same network. No public internet is used.
-
-Typical scenarios:
-
-* Database failover
-* Disaster recovery
-* Cross-region data replication
-* Communication between application tiers located in different VNets
-
----
-
-## 3. Why Use VNet Peering?
-
-* **High performance:** Uses Microsoft’s high-speed private backbone network.
-* **Secure:** Traffic never touches the public internet.
-* **Cost-effective:** No VPN gateway required for most scenarios.
-* **Scalable:** Automatically adjusts to increased traffic.
-* **Low latency & high bandwidth** communication between VNets.
-
----
-
-## 4. Types of VNet Peering
-
-### 1. **Regional VNet Peering**
-
-Both VNets are in the same Azure region.
-
-### 2. **Global VNet Peering**
-
-VNets are located in different Azure regions (e.g., East US ↔ West US, or Central India ↔ South India).
-
----
-
-## 6. Benefits of VNet Peering
-
-* Private, secure communication
-* High bandwidth, low latency
-* No downtime while configuring
-* Reduces cost (no VPN gateway required)
-* Ideal for multi-tier and multi-region architectures
-
----
-
+## Benefits
+- Private, secure connection  
+- High performance  
+- No downtime  
+- Multi-tier and multi-region apps can communicate  
 
