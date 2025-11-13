@@ -105,4 +105,52 @@ Key scenarios you can achieve with a VNet: :contentReference[oaicite:2]{index=2}
 
 ---
 
+# Azure VNet Peering — Notes 
+<img width="844" height="276" alt="image (3)" src="https://github.com/user-attachments/assets/1df13de6-3251-4d51-b041-2a7e0ef69c39" />
+
+## 2. What is Azure VNet Peering?
+
+Azure VNet Peering connects two virtual networks so that the resources inside them (VMs, databases, applications) can communicate privately as if they are part of the same network. No public internet is used.
+
+Typical scenarios:
+
+* Database failover
+* Disaster recovery
+* Cross-region data replication
+* Communication between application tiers located in different VNets
+
+---
+
+## 3. Why Use VNet Peering?
+
+* **High performance:** Uses Microsoft’s high-speed private backbone network.
+* **Secure:** Traffic never touches the public internet.
+* **Cost-effective:** No VPN gateway required for most scenarios.
+* **Scalable:** Automatically adjusts to increased traffic.
+* **Low latency & high bandwidth** communication between VNets.
+
+---
+
+## 4. Types of VNet Peering
+
+### 1. **Regional VNet Peering**
+
+Both VNets are in the same Azure region.
+
+### 2. **Global VNet Peering**
+
+VNets are located in different Azure regions (e.g., East US ↔ West US, or Central India ↔ South India).
+
+---
+
+## 6. Benefits of VNet Peering
+
+* Private, secure communication
+* High bandwidth, low latency
+* No downtime while configuring
+* Reduces cost (no VPN gateway required)
+* Ideal for multi-tier and multi-region architectures
+
+---
+
 
