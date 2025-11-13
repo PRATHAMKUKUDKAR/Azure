@@ -1,5 +1,5 @@
 # Azure Virtual Machine (VM)
-## Overview
+
 An **Azure Virtual Machine (VM)** is an on-demand computer that runs on Azure’s cloud.  
 It works like a physical computer and allows you to run Windows/Linux OS and applications.
 
