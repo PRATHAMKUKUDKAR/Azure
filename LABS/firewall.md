@@ -6,7 +6,7 @@ This documentation explains how to create:
 - ✔ Subnet for Azure Firewall  
 - ✔ Windows Server VM  
 - ✔ Azure Firewall (Standard)  
-- ✔ DNAT Rule to allow RDP using Firewall Public IP  
+- ✔ Aplication Rule to allow RDP using Firewall Public IP  
 
 All steps include screenshots for better understanding.
 
@@ -133,10 +133,36 @@ All steps include screenshots for better understanding.
 ![](https://github.com/user-attachments/assets/989a68ff-2e9c-4e98-b323-c5b2381860a9)
 
 ---
+# Step 4- create route Table
 
-# 🔥 STEP 4 — Add DNAT Rule for RDP
+
+#assosiat
 
 
+
+
+
+
+
+
+
+
+
+
+# 🔥 STEP 4 — Add Aplication Rule for RDP
+### 1. Go to Firewall → **Rules (Classic)**  
+### 2. Click **Add application rule collection**
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/27618efd-e553-4cb2-935c-1a2063e7d128" />
+
+### 3. Enter Rule Details on Target FQDNS 
+1. name: `Application`
+2. priority: `200`
+3. Action `allow`
+4. name: `App-Alow`
+5. source type: `ip address`
+6. source: `*`
+7. protocal:port: `https80,https:443`
+8. Target FQDNS: `google.com`
 
 # 🟢 STEP 5 — Connect via RDP
 
