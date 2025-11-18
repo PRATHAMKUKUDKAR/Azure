@@ -136,8 +136,7 @@ All steps include screenshots for better understanding.
 
 # 🔥 STEP 4 — Add DNAT Rule for RDP
 
-### 1. Go to Firewall → **Rules (Classic)**  
-![](https://github.com/user-attachments/assets/6203e735-d8e4-4b01-bdf3-d4e8d895b620)
+### 1. Go to Firewall → **Rules (Classic)** 
 
 ### 2. Click **Add NAT Rule Collection**
 ![](https://github.com/user-attachments/assets/a96e4b8e-c639-4d4d-bf89-1557717ed8b7)
