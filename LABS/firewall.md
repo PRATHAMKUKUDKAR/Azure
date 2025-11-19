@@ -134,6 +134,18 @@ All steps include screenshots for better understanding.
 
 ---
 # Step 4- create route Table
+1. Go to Vertual Network
+2. click on route Table
+3. click on Create 
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/cfa1fd7f-b6c9-49e8-9de8-4eeaf1f5de20" />
+4. Type Resource Group: `Pratham`
+5. Region: `Central India`
+6. Name: `RT`
+7. click on Review + Create
+   <img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/823950a8-653a-4352-92b8-2325a0e00be9" />
+
+8. click on Create
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4d46bb28-b845-4f92-9aac-c0d426abf0b8" />
 
 
 #assosiat
