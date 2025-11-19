@@ -6,15 +6,8 @@ This documentation explains how to create:
 - ✔ Subnet for Azure Firewall  
 - ✔ Windows Server VM  
 - ✔ Azure Firewall (Standard)  
-- ✔ Aplication Rule to allow RDP using Firewall Public IP  
 
 All steps include screenshots for better understanding.
-
----
-
-## Diagram
-
-<img width="1252" height="716" alt="image" src="https://github.com/user-attachments/assets/5f16b01e-69ff-4030-b6ee-bf405d715ea2" />
 
 ---
 # 🚀 STEP 1 — Create Virtual Network (VNet)
@@ -133,34 +126,6 @@ All steps include screenshots for better understanding.
 ![](https://github.com/user-attachments/assets/989a68ff-2e9c-4e98-b323-c5b2381860a9)
 
 ---
-# Step 4- create route Table
-1. Go to Vertual Network
-2. click on route Table
-3. click on Create 
-<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/cfa1fd7f-b6c9-49e8-9de8-4eeaf1f5de20" />
-4. Type Resource Group: `Pratham`
-5. Region: `Central India`
-6. Name: `RT`
-7. click on Review + Create
-   <img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/823950a8-653a-4352-92b8-2325a0e00be9" />
-
-8. click on Create
-   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4d46bb28-b845-4f92-9aac-c0d426abf0b8" />
-
-
-#assosiat
-
-
-
-
-
-
-
-
-
-
-
-
 # 🔥 STEP 4 — Add Aplication Rule for RDP
 ### 1. Go to Firewall → **Rules (Classic)**  
 ### 2. Click **Add application rule collection**
@@ -176,7 +141,49 @@ All steps include screenshots for better understanding.
 7. protocal:port: `https80,https:443`
 8. Target FQDNS: `google.com`
 
-# 🟢 STEP 5 — Connect via RDP
+
+
+
+# Step 5- create route Table
+1. Go to Vertual Network
+2. click on route Table
+3. click on Create 
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/cfa1fd7f-b6c9-49e8-9de8-4eeaf1f5de20" />
+4. Type Resource Group: `Pratham`
+5. Region: `Central India`
+6. Name: `RT`
+7. click on Review + Create
+   <img width="1919" height="1071" alt="image" src="https://github.com/user-attachments/assets/823950a8-653a-4352-92b8-2325a0e00be9" />
+
+8. click on Create
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4d46bb28-b845-4f92-9aac-c0d426abf0b8" />
+
+9. Go to Route Table
+10. click on new created route
+11. go to route
+12. click on add
+13. type route name: `Firewall-to-Intrnet`
+14. Destination Type: `Ip address`
+15. Destination ip address/CIDR Range: `0.0.0.0/0` // For Any
+16. type next hop type: `Vartual appliance`
+17. type next hop addres: `10.0.2.0`  //Firewall Private ip
+18. click Add
+    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f211bbfa-8e71-4a89-9ba2-c5608ed18ff0" />
+
+## assosiat Subnet
+1. click on subnet
+2. click on Assosiate
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/795a0c6f-7212-43f9-88b7-daa556252efc" />
+
+3. select vertual network: `VNET
+4. select subnet: `AzureFirewallSubnet`
+5. click on Add
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1ab5a516-6e4d-45a6-bc6b-923475665456" />
+
+
+
+
+# 🟢 STEP 6 — Connect via RDP
 
 ### 1. Open Remote Desktop  
 ![](https://github.com/user-attachments/assets/e57bc33b-a42b-4321-95e9-2f625e00e74a)
@@ -192,13 +199,15 @@ All steps include screenshots for better understanding.
 
 ---
 
-# 🎉 FINAL RESULT
-- Azure Firewall working  
-- Windows VM successfully RDP via Firewall  
-- Secure DNAT rule created  
-- Working architecture with screenshots  
+# Stap 7 - Verify 
+1. click on Microsoft Edge
+2. serch `www.google.com`
+3. it is open
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/2c2e354b-3e77-46f3-85f1-507dcf01a1e1" />
+4. serch `any website you can serch`
+5. it is not working
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/669f4dc0-307f-4e30-9068-ffe5a15d78c8" />
 
----
 
 # 👑 Author  
 **Pratham**
