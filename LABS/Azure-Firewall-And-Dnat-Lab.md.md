@@ -12,7 +12,7 @@ All steps include screenshots for better understanding.
 
 ---
 
-## Diagram
+# 🧩 Architecture Diagram
 
 <img width="1252" height="716" alt="image" src="https://github.com/user-attachments/assets/5f16b01e-69ff-4030-b6ee-bf405d715ea2" />
 
