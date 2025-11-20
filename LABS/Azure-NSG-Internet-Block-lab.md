@@ -11,7 +11,7 @@ All steps include screenshots for better understanding.
 
 ---
 
-# Diagram
+# 🧩 Architecture Diagram
 <img width="1660" height="472" alt="image" src="https://github.com/user-attachments/assets/931267ec-5e93-43d9-945a-1283a9a152c7" />
 
 ---
