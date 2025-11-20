@@ -1,3 +1,12 @@
+# Az104 Az700 cource 
+
+
+
+
+
+
+
+
 # Azure Virtual Machine (VM)
 
 An **Azure Virtual Machine (VM)** is an on-demand computer that runs on Azure’s cloud.  
@@ -71,3 +80,17 @@ Azure Bastion is a fully managed PaaS service that you provision to securely con
 Bastion provides secure RDP and SSH connectivity to all of the VMs in the virtual network for which it's provisioned. Using Azure Bastion protects your virtual machines from exposing RDP/SSH ports to the outside world, while still providing secure access using RDP/SSH.
 
 <img width="1861" height="700" alt="image" src="https://github.com/user-attachments/assets/633971d8-804f-4716-8ed3-e6299d73f7b7" />
+
+
+
+# What is Azure VPN Gateway?
+Azure VPN Gateway service can be used to send encrypted traffic between an Azure virtual network and on-premises locations over the public Internet. You can also use VPN Gateway to send encrypted traffic between Azure virtual networks over the Microsoft network. VPN Gateway uses a specific type of Azure virtual network gateway called a VPN gateway. Multiple connections can be created to the same VPN gateway. When you create multiple connections, all VPN tunnels share the available gateway bandwidth.
+ 
+Send encrypted traffic between an Azure virtual network and on-premises locations over the public Internet using one of the following types of connections:
+Site-to-site connection: A cross-premises IPsec/IKE VPN tunnel connection between the VPN gateway and an on-premises VPN device.
+Point-to-site connection: VPN over OpenVPN, IKEv2, or SSTP. This type of connection lets you connect to your virtual network from a remote location, such as from a conference or from home.
+Send encrypted traffic between Azure virtual networks using the following types of connections:
+VNet-to-VNet: An IPsec/IKE VPN tunnel connection between the VPN gateway and another Azure VPN gateway that uses a VNet-to-VNet connection type. This connection type is designed specifically for VNet-to-VNet connections.
+Site-to-site connection: An IPsec/IKE VPN tunnel connection between the VPN gateway and another Azure VPN gateway. This type of connection, when used in the VNet-to-VNet architecture, uses the Site-to-site (IPsec) connection type, which allows cross-premises connections to the gateway in addition connections between VPN gateways.
+ 
+ 
