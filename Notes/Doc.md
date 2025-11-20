@@ -1,10 +1,8 @@
-# Az104 Az700 cource 
+# Az104 Az700 Az500 cource 
 
-
-
-
-
-
+# Az104: administrator
+# Az700: Networking
+# Az500: Azure Security
 
 
 # Azure Virtual Machine (VM)
