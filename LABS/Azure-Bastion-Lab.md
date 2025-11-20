@@ -7,7 +7,7 @@ Azure Bastion provides browser-based RDP/SSH access directly from the Azure port
 It enhances security by preventing exposure of your VM to the public internet.
 
 ---
-## Diagram
+# 🧩 Architecture Diagram
 <img width="1552" height="681" alt="image" src="https://github.com/user-attachments/assets/d40d4e4d-35e6-4289-95c0-05cd0a4af766" />
 
 ---
