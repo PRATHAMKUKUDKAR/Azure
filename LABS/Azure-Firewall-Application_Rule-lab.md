@@ -13,7 +13,8 @@ This documentation explains how to deploy:
 All steps include screenshots for better understanding.
 
 ---
-# Diagram
+# 🧩 Architecture Diagram
+
 <img width="1338" height="843" alt="image" src="https://github.com/user-attachments/assets/7a93c9dc-1e40-4658-8153-13804a4e0444" />
 
 ---
