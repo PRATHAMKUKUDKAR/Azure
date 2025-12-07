@@ -112,25 +112,6 @@
 <img width="1918" height="1074" alt="image" src="https://github.com/user-attachments/assets/2ebbb8f5-1d7e-4cb1-ad73-e496b5d38cfb" />
 
 
-
-
-
-### install role web server iis
-1. clickon window icone
-2. click on server manager
-   <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/0798d6b6-f6f9-42fb-907e-6b8a5abeeafb" />
-3. click on add features and role
-   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c2ba03f7-8307-48de-9e09-09ef3b7ea5a7" />
-4. go to server role
-5. select web server (iis)
-6. click on next
-   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5c6e66f3-9c1b-493c-b2c8-3fa7b20e3a7c" />
-7. click on install
-   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f1d60bd5-1e32-4d81-a742-4c640f206108" />
-
-
-
-
 ## stape 3 create vertual network Geteway
 1. click on serch tap
 2. then serch vng
@@ -192,6 +173,8 @@
 9. CLICK ON CREATE VPN CONNECTION
    <img width="1919" height="1069" alt="image" src="https://github.com/user-attachments/assets/010f4599-d40a-4370-ab8e-4f87bd5620a3" />
    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/fa658c61-84db-47d3-8f64-c4712a0a7d49" />
+
+
 ### ADD ROUTE IN DEFALTE ROUTE TABLE IN AWS
 1. CLICK ON ROUTE TABLE
 2. CLICK ON EDIT ROUTE
@@ -201,6 +184,44 @@
 5. SELECT TARGET: `VERTUAL PRIVATE GATEWAY` `SELECT VERTUAL PRIVATE GATWAY ID`
 6. CLICK ON SAVE CHENGES
    <img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/4eb728c2-d44f-44fe-83ce-db588544e15b" />
+
+
+### create ec2 In AWS
+1. serch ec2
+2. click on ec2
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/70f81f71-b152-4b00-8703-10f468453561" />
+3. click on lunch instance
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/da9a6fc6-62b8-449c-aa30-ef853730e9a4" />
+4. TYPE NAME: `MACHINE1`
+5. SELECT APPKICATION AND OS IMAGE: `AMAZONE LINUX`
+6. SELECT INSTANCE TYPE : `T3MICRO`
+7. SELECT KEY PAIR : `LONDON`  -----------------------------(YOU CAN CREATE NEW KEY PAIR AND CHOICE THEM)
+8. SELCT NETWORK: `CHOICE FEFALTE VPC`
+9. FIREWALL SECURITY GROUP
+10. ALLOW SSH TRAFIC
+11. CLICK ON LANCH INSTANCE
+    <img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/96437547-67fa-4cbd-82ca-38adfc0eedce" />
+   <img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/495860bb-4135-42a7-be90-236fb9451fce" />
+   <img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/2a782772-e17a-4f0c-8969-4f202044ff46" />
+
+### ALLOW SECURITY GROUP
+1. SELECT ON MACHINE1
+2. GO TO SECURITY TAP
+3. CLICK ON SECURITY GROUP
+   <img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/e1d90d64-6e1a-44d3-8bf9-54e9b08d73d7" />
+4. click on edit inbound rule
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4f9d3c70-b3e1-4726-87c7-7187147bb83f" />
+5. click on add
+6. select type: `all trafic`
+7. source: `anywhere`
+8. click on save rule
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a4e14443-739e-4345-b12f-3e2eb17df20e" />
+### connect to ec2
+1. select machine1
+2. click on connect
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/189cc13a-1880-494a-aee9-fccb6523edcd" />
+3. click on again connect
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/69fb46b5-ebe6-4687-9bea-0957f6b22c76" />
 
 
 ## STAP 5 CREATE LOCal NETWORK GATEWAY IN AZURE
@@ -244,3 +265,11 @@
 18. CLICK ON REWEW+CREATE
 19. CLICK ON CREATE
     <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4ccefe73-6a76-4cd6-94e0-645078f6187c" />
+
+
+
+## stap 7 texting
+1. conect to ec2
+2. and type `ping 10.0.1.4` -----------------------------------------(this private ip copy form vm-1)
+   <img width="1919" height="1033" alt="image" src="https://github.com/user-attachments/assets/0ac8a7a3-6ddf-4262-af23-8c447a283ce4" />
+this is susses site to site vpn 
