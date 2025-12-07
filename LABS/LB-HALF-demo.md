@@ -248,3 +248,27 @@ Do NOT turn off firewall in production.**
 6. add index.html file
    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/1be1302d-b43b-4473-83bc-917bf0bbaf0e" />
 
+## stap 6 create lb 
+1. srarch lb
+2. click on load balancer icone
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/51db61b3-c188-437d-bce6-cff912babfa7" />
+3. CHOICE RESOURCE GROUP: `PRATHAM`
+4. TYPE NAME: `LB`
+5. SELECT REGION: `CENTRAL INDIA`
+6. SKU : `Standard (Distribute traffic to backend resources)`
+7. TYPE : `PUBLIC`
+8. TIER : `REGANAL`
+9. CLICK NEXT:FRONTEND IP CONFIGURATION
+    <img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/30a0b6ff-eb61-4da5-8cce-b16cb6fc885d" />
+10. ADD FRONTEND IP CONFIGURATION
+    1. NAME: `LB-FD`
+    2. IP VERSION: `IPV4`
+    3. IP TYPE IP : `ADDRESS`
+    4. PUBLIC IP ADDRESS: `CLICK CREATE NEW`
+11. ADD A PUBLIC IP ADDRESS
+    1. NAME: `FD-IP`
+    2. SAVE --- SAVE
+
+
+
+    #LB HALF 
