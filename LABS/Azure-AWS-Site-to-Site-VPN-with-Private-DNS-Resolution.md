@@ -666,5 +666,58 @@ The **Site-to-Site VPN is fully working**.
 19. CLICK ON CREATE
    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8cf84033-c549-4e23-a0a3-bdbcf774d51b" />
 
+# STAP 8 Create Route 53 Outbound Resolver IN AWS
+1. SERCH ROUTE
+2. CLICK ON ROUTE 53 ICONE
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/edc83143-5161-4edf-a954-ac079eb6edd1" />
+3. click on outbound rule
+4. click on create outbound endpoint
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5890dd16-5281-48fe-9054-5aa158cf2e33" />
+5. General settings for outbound endpoint
+   1. Endpoint name : `aws-andpoint`
+   2. select VPC in the Region: `select defalte vpc id`
+   3. select security group
+   4. endpoint type : `ipv4`
+      <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/608ffd22-9d19-4314-b1ae-eec614d7c0a3" />
+6. IP addresses
+   1. IP address #1
+   1. Availability Zone : `eu-west-2a`
+   2. Subnet : `select defallte subnet`
+   2. IP address #2
+      1. Availability Zone : `eu-west-2b`
+      2. Subnet : `select defallte subnet`
+    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/e5b7a0a4-f40f-48e8-97d1-af1237e61ca0" />
+7. click on create outbound endpoint
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/409f45c3-6f5e-4c51-ba0d-db6e38e2f4bb" />
+
+## create rules
+1. Go to Rules tab
+2. click on create Rule
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8c7336ce-39c0-4ebf-95ef-bc2a2060bf3c" />
+3. Rule for outbound traffic
+   1. name : `OTBD-RULE`
+   2. Rule type : `Forward`
+   3. Domain name : `pratham.in`
+   4. VPCs that use this rule : `select defalte vpc`
+   5. select Outbound endpoint : `aws-andpoint` ------- (you can create alredy select this)
+      <img width="1917" height="1079" alt="image" src="https://github.com/user-attachments/assets/4a773336-f3d5-4fc6-bfe4-87aec544aef1" />
+4. Target IP addresses
+   1. IPv4 address : `10.0.4.4`     -------- (this ip addres Azure DNS-RESOLVER Inbound endpoints)
+5. click on submit
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/17180776-61b4-4e37-a6b7-4570425cc70d" />
 
 
+## stap 9
+1. Select EC2 instance  
+2. Click **Connect**
+   ![](https://github.com/user-attachments/assets/189cc13a-1880-494a-aee9-fccb6523edcd)
+
+3. Click **Connect** again  
+   ![](https://github.com/user-attachments/assets/69fb46b5-ebe6-4687-9bea-0957f6b22c76)
+
+4. type `curl www.pratham.in`
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a3d50355-2079-41ec-b15b-757063772a69" />
+
+it is sussesfully work 
+ 
+---
