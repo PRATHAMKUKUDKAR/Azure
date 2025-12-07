@@ -1,3 +1,24 @@
+# Azure–AWS Site-to-Site VPN with Private DNS & DNS Resolvers
+
+## 🎯 Lab Goal
+
+This lab is to connect **Azure** and **AWS** using a secure
+**Site-to-Site VPN** and set up **private DNS resolution** between both clouds.
+
+By completing this lab, you will learn how to:
+
+- Create an Azure VNet, subnets, and a Virtual Machine  
+- Create an Azure VPN Gateway  
+- Configure AWS VPC, VGW, CGW, and VPN Connection  
+- Build a working VPN tunnel between Azure and AWS  
+- Test communication using private IP ping  
+- Create an Azure Load Balancer and host a web page  
+- Create a Private DNS Zone in Azure  
+- Configure Azure DNS Private Resolver  
+- Configure AWS Route53 Outbound Resolver  
+- Test DNS name resolution from AWS to Azure using `curl www.pratham.in`
+
+This lab helps you understand **multi-cloud networking**, **VPN**, and **private DNS** in a very simple and practical way.
 
 
 # 🟦 STEP 1 — Create Azure VNet and Subnets
