@@ -182,6 +182,30 @@ Do NOT turn off firewall in production.**
    ![](https://github.com/user-attachments/assets/2ebbb8f5-1d7e-4cb1-ad73-e496b5d38cfb)
 
 ---
+### install role web server iis
+1. clickon window icone
+2. click on server manager
+   <img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/0798d6b6-f6f9-42fb-907e-6b8a5abeeafb" />
+3. click on add features and role
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c2ba03f7-8307-48de-9e09-09ef3b7ea5a7" />
+4. go to server role
+5. select web server (iis)
+6. click on next
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5c6e66f3-9c1b-493c-b2c8-3fa7b20e3a7c" />
+7. click on install
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f1d60bd5-1e32-4d81-a742-4c640f206108" />
+
+### add index.ttml file
+1. click on window icone
+2. click on file Explorer
+   <img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/6c5d3191-65e7-4fe8-948e-11c63f3a7c5b" />
+3. go to this pc -- go to windows c -- initpub -- wwwroot
+4. remove by defalte file
+5. create index.html file
+6. type WELCOME TO SERVER 1
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d2b8e60b-ddc8-4883-9735-bac5962c29f3" />
+
+
 
 # 🟦 STEP 3 — Create Azure Virtual Network Gateway (VNG)
 
