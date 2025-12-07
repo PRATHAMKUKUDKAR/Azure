@@ -217,11 +217,16 @@ Click **Review + Create → Create**
 ![](https://github.com/user-attachments/assets/3fe1ddbf-c259-4266-bd39-13b1972fc21c)
 
 4. Fill details:
+   
 | Field | Value |
 |------|--------|
 | Name | www |
 | Type | A |
-| IP | `10.0.1.4` (VM Private IP) |
+| IP | 10.0.1.4 (VM Private IP) |
+
+5. CLICK ON ADD
+
+   <img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/014914c2-e663-4095-b7c7-e887bbf3e310" />
 
 ---
 
