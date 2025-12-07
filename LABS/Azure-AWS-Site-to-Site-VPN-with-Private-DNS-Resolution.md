@@ -591,6 +591,80 @@ The **Site-to-Site VPN is fully working**.
 13. CLICK ON SAVE
     <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/971c8d32-f59e-461c-a712-c2dbc2e5fd5a" />
 
-# stape 7 create private dns 
+# 🟪 STEP 7 — Create Private DNS Zone
+
+1. Search → **Private DNS Zones**  
+![](https://github.com/user-attachments/assets/20a84156-35fb-4647-9e09-8b4e832f9504)
+
+2. Click **Create**
+
+3. Basic Settings  
+| Field | Value |
+|-------|--------|
+| Resource Group | PRATHAM |
+| DNS Zone Name | pratham.in |
+
+![](https://github.com/user-attachments/assets/7d2cfae1-71aa-4fe6-a0e8-e8caaf13b586)
+
+---
+
+## Link VNet with Private DNS Zone
+
+1. Go to **Virtual Network Links**  
+2. Click **Add**  
+3. Name: `DNS-LINK`  
+4. Select VNet: **V-NET**  
+5. Enable Auto Registration  
+6. Click Create  
+
+![](https://github.com/user-attachments/assets/c4bc4dfa-ffcf-47b8-a097-0ac111707d51)  
+![](https://github.com/user-attachments/assets/540da18c-6019-4f1a-a8b3-ec717dd960a5)
+
+---
+
+# 🟫 STEP 7B — Create DNS A-Record
+
+1. Open **pratham.in** DNS zone  
+2. Go to **Record Set**  
+3. Click **Add Record**  
+4. Fill details:
+| Field | Value |
+|------|--------|
+| Name | www |
+| Type | A |
+| IP | 4.224.153.213 (LOAD BALANCER FRONTEND IP) |
+
+5. Click on Add
+   <img width="1919" height="1078" alt="image" src="https://github.com/user-attachments/assets/52f40657-418a-43a5-8082-ccab8ecebf19" />
+
+---
+
+# step 7E Create DNS PRIVATE RESOLVER
+1. SEARCH DNS PRIVATE
+2. CLICK ON DNS PRIVATE RESOLVER ICONE
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/f1202609-7d1a-428c-9f75-cd793e7eb0a4" />
+3. CLICK  ON CREATE
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/5e79a483-d6e3-4324-9f61-2218a8261a30" />
+4. SELECT RESOURCE GROUP: `PRATHAM`
+5. NAME: `DNS-RESOLVER`
+6. REGION: `CETRAL INDIA`
+7. SELECT VERTUAL NETWORK: `V-NET`
+8. CLICK NEXT:ENDBOUND ENDPOINT
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/85e674da-d993-4047-9cc5-95a79153c263" />
+9. CLICK ON ADD AND ENDPOINT
+10. ENDPOINT NAME: `DNS-INBD-ENDP`
+11. SUBNET : `CREATE NEW`
+12. NAME: `DNS-INBD-SUB`
+13. TYPE SUBNET ADDRESS RANGE : `10.0.4.0`
+14. CLICK ON CREATE
+    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/845ae6d2-ee1a-4033-9d8d-7e37b604bfd2" />
+ 
+16. IP address assignment: `DYNAMIC`
+17. CLICK  ON SAVE
+18. CLICK ON REWIEW+CREATE
+    <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/112a77a1-f4c3-4e28-93d0-d7c3fb4b4d0b" />
+19. CLICK ON CREATE
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/8cf84033-c549-4e23-a0a3-bdbcf774d51b" />
+
 
 
