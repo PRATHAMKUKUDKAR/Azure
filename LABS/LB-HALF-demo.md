@@ -257,9 +257,10 @@ Do NOT turn off firewall in production.**
 5. SELECT REGION: `CENTRAL INDIA`
 6. SKU : `Standard (Distribute traffic to backend resources)`
 7. TYPE : `PUBLIC`
-8. TIER : `REGANAL`
+8. TIER : `Globle`
 9. CLICK NEXT:FRONTEND IP CONFIGURATION
-    <img width="1919" height="1077" alt="image" src="https://github.com/user-attachments/assets/30a0b6ff-eb61-4da5-8cce-b16cb6fc885d" />
+   <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ad3020ac-f02e-4506-910f-91abd5118e71" />
+
 10. ADD FRONTEND IP CONFIGURATION
     1. NAME: `LB-FD`
     2. IP VERSION: `IPV4`
@@ -268,6 +269,8 @@ Do NOT turn off firewall in production.**
 11. ADD A PUBLIC IP ADDRESS
     1. NAME: `FD-IP`
     2. SAVE --- SAVE
+    3. REWIEW + CREATE
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/bfb327c6-5e7c-45a7-b451-26580047d3fe" />
 
 
 
