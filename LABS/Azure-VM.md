@@ -3,7 +3,11 @@
 This guide explains how to create a Windows virtual machine in Azure with step-by-step screenshots.
 
 ---
+# 🧩 Architecture Diagram
 
+<img width="1597" height="788" alt="Screenshot 2025-12-09 233130" src="https://github.com/user-attachments/assets/cd431030-386a-41e1-a747-730445297b9d" />
+
+---
 
 ## 1️⃣ Go to Azure Portal
 1. Visit **Azure Portal**
